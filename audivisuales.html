@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>La Segunda Guerra Mundial</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <style>
+      body {
+        font-family: "Lucida Console", "Courier New", monospace;
+        background: linear-gradient(
+          to right,
+          rgb(189, 189, 255),
+          rgb(255, 233, 236)
+        );
+        padding: 0;
+        margin: 0;
+      }
+
+      header {
+        text-align: center;
+      }
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+      }
+
+      li {
+        float: left;
+      }
+
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      li a:hover:not(.active) {
+        background-color: #111;
+      }
+
+      .active {
+        background-color: #04aa6d;
+      }
+
+      h1 {
+        background-color: black;
+        padding: 10px;
+        margin: 0;
+        color: #92a4ff;
+      }
+
+      div.gallery {
+        margin: 5px;
+        border: 1px solid #ccc;
+        float: left;
+        width: 33vw;
+      }
+
+      div.gallery:hover {
+        border: 1px solid #777;
+      }
+
+      div.gallery img {
+        width: 100%;
+        height: auto;
+      }
+
+      div.desc {
+        padding: 15px;
+        text-align: center;
+      }
+
+      .centrado {
+        display: flex;
+        justify-content: center;
+      }
+
+      video {
+        display: block;
+        margin: 20px auto;
+      }
+
+      .footer {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1><strong>La segunda guerra mundial</strong></h1>
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a class="active" href="audivisuales.html">Audiovisuales</a>
+          </li>
+          <li>
+            <a href="preferencias.html">Preferencias</a>
+          </li>
+          <li>
+            <a href="contacto.html">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- 
+    
+        Envoltorio para <video> y <audio>: Ambos elementos están ahora dentro de un
+        contenedor <div> con la clase centrado. Esto permite que las propiedades
+        flexbox se apliquen correctamente, centrando el contenido.
+
+        Propiedades de <video>: Se añadió margin: 20px auto en el CSS de <video> para
+        asegurar que se centre horizontalmente y tenga un espaciado superior e
+        inferior adecuado.
+    
+    -->
+
+    <!-- Contenedor para centrar el video -->
+    <div class="centrado">
+      <video
+        src="assets/videos/ww2.mp4"
+        autoplay
+        muted
+        loop
+        width="720px"
+      ></video>
+    </div>
+
+    <!-- Contenedor para centrar el audio -->
+    <div class="centrado">
+      <audio
+        src="assets/audio/Zack Hemsey - _The Way (Instrumental)_.mp3"
+        controls
+        autoplay
+        loop
+      ></audio>
+    </div>
+
+    <!-- Galería de imágenes -->
+    <section class="centrado">
+      <div class="gallery">
+        <a href="assets/images/1.jpg" target="_blank">
+          <img src="assets/images/1.jpg" alt="Imagen WW2 1" width="1200 px" />
+        </a>
+        <div class="desc">Imagen 1</div>
+      </div>
+      <div class="gallery">
+        <a href="assets/images/2.jpg" target="_blank">
+          <img src="assets/images/2.jpg" alt="Imagen WW2 2" width="1200 px" />
+        </a>
+        <div class="desc">Imagen 2</div>
+      </div>
+      <div class="gallery">
+        <a href="assets/images/3.jpg" target="_blank">
+          <img src="assets/images/3.jpg" alt="Imagen WW2 3" width="1200 px" />
+        </a>
+        <div class="desc">Imagen 3</div>
+      </div>
+      <div class="gallery">
+        <a href="assets/images/4.jpg" target="_blank">
+          <img src="assets/images/4.jpg" alt="Imagen WW2 4" width="1200 px" />
+        </a>
+        <div class="desc">Imagen 4</div>
+      </div>
+    </section>
+
+    <!-- El símbolo © se representa con &copy; -->
+    <footer class="footer">
+      <p>Derechos reservados &copy; 2024</p>
+    </footer>
+  </body>
+</html>
